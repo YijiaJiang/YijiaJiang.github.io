@@ -1,0 +1,20 @@
+---
+title: "index"
+author: "Yijia Jiang"
+date: "2022-10-25"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# About me
+
+My name is Yijia Jiang, a second year M.S. student in Biostatistics department, the Mailman School of Public Health in [Columbia University in the city of New York](https://www.columbia.edu/). And I completed my bachelor degree in Bioinformatics in [Xi'an Jiaotong-Liverpool University](https://www.bnu.edu.cn/).
+
+
+
+# Contact
+Tel: +1 (646)-829-6470 [The United State]
+Email:<yijia.jiang1224@gmail.com> OR <yj2687@cumc.columbia.edu>
