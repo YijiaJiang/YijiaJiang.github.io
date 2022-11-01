@@ -11,7 +11,7 @@
 
 
 
-<title>index.knit</title>
+<title>dashboard.knit</title>
 
 <script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -365,24 +365,32 @@ div.tocify {
 </div>
 
 
-<div id="about-me" class="section level1">
-<h1>About me</h1>
-<p>My name is Yijia Jiang, a second year M.S. student in Biostatistics
-department, the Mailman School of Public Health in <a
-href="https://www.columbia.edu/">Columbia University in the city of New
-York</a>. And I completed my bachelor degree in Bioinformatics in <a
-href="https://www.xjtlu.edu.cn/en/">Xi’an Jiaotong-Liverpool
-University</a>.</p>
-<p><img src="images/yellow%20mountain.jpg" style="width:100%"></p>
-</div>
-<div id="contact" class="section level1">
-<h1>Contact</h1>
-<p>Tel: +1 (646)-829-6470 [The United State]</p>
-<p>Email:<a href="mailto:yijia.jiang1224@gmail.com"
-class="email">yijia.jiang1224@gmail.com</a> OR <a
-href="mailto:yj2687@cumc.columbia.edu"
-class="email">yj2687@cumc.columbia.edu</a></p>
-</div>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ──────────────────── tidyverse 1.3.2 ──
+## ✔ ggplot2 3.3.6      ✔ purrr   0.3.5 
+## ✔ tibble  3.1.8      ✔ dplyr   1.0.10
+## ✔ tidyr   1.2.0      ✔ stringr 1.4.1 
+## ✔ readr   2.1.2      ✔ forcats 0.5.2 
+## ── Conflicts ─────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(p8105.datasets)
+
+library(plotly)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;plotly&#39;
+## 
+## The following object is masked from &#39;package:ggplot2&#39;:
+## 
+##     last_plot
+## 
+## The following object is masked from &#39;package:stats&#39;:
+## 
+##     filter
+## 
+## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     layout</code></pre>
 
 
 

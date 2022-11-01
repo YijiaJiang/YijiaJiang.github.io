@@ -5,10 +5,12 @@ navbar:
   right:
     - text: "About"
       href: about.html
+    - icon: fa-brands fa-linkedin
+      href: https://www.linkedin.com/in/yijia-jiang/
     - icon: fa-envelope fa-lg
       href: mailto:yj2687@cumc.columbia.edu>
     - icon: fa-github fa-lg
       href: http://github.com/YijiaJiang/
 output:
   html_document:
-    theme: cerulean
+    css: bootstrap.min (1).css
