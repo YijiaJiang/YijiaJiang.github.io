@@ -49,9 +49,10 @@ instacart_df %>%
                                         "10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00",
                                         "19:00","20:00","21:00","22:00","23:00"))) %>% 
   count(time, department) %>%
-  plot_ly(x = ~time, y = ~n, 
+  plot_ly(x = ~time, y = ~n, alpha = 0.6,
           type = "scatter", mode = "lines+markers", color = ~str_to_title(department)) %>% 
-  layout(xaxis = list(title = "Time"), yaxis = list(title = "Number of Orders"))
+  layout(xaxis = list(title = "Time"), yaxis = list(title = "Number of Orders"),
+         font = list(size = 10.5))
 ```
 
 
@@ -69,7 +70,8 @@ instacart_df %>%
   mutate(aisle = str_to_title(aisle)) %>% 
   mutate(aisle = fct_reorder(aisle, -n)) %>% 
   plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "bar") %>% 
-  layout(xaxis = list(title = "Aisle"), yaxis = list(title = "Number of Orders")) %>% 
+  layout(xaxis = list(title = "Aisle"), yaxis = list(title = "Number of Orders"),
+         font = list(size = 10.5)) %>% 
   hide_legend()
 ```
 
@@ -80,8 +82,8 @@ instacart_df %>%
 
 ```{r,message=FALSE,warning=FALSE}
 instacart_df %>% 
-  plot_ly(y = ~order_number, color = ~day_of_week, type = "box") %>% 
-  layout(yaxis = list(title = "Number of Orders"), 
+  plot_ly(y = ~order_number, color = ~day_of_week, type = "box", alpha = 0.2) %>% 
+  layout(font = list(size = 10.5), yaxis = list(title = "Number of Orders"), 
          xaxis = list(title = "Day", categoryorder = "array", categoryarray = c("Sun","Mon","Tue","Wed","Thu","Fri","Sat"))) %>%
   hide_legend()
 ```
