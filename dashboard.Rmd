@@ -14,7 +14,6 @@ output:
       bootswatch: minty
 ---
 
-
 ```{r set up,include=FALSE}
 library(flexdashboard)
 library(tidyverse)
@@ -51,7 +50,7 @@ instacart_df %>%
                                         "19:00","20:00","21:00","22:00","23:00"))) %>% 
   count(time, department) %>%
   plot_ly(x = ~time, y = ~n, 
-          type = "scatter", mode = "lines+markers", color = ~department, colors = "viridis") %>% 
+          type = "scatter", mode = "lines+markers", color = ~department) %>% 
   layout(xaxis = list(title = "Time"), yaxis = list(title = "Number of Orders"))
 ```
 
@@ -68,7 +67,7 @@ instacart_df %>%
   count(aisle) %>% 
   filter(n > 15000) %>% 
   mutate(aisle = fct_reorder(aisle, n)) %>% 
-  plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "bar", colors = "viridis") %>% 
+  plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "bar") %>% 
   layout(xaxis = list(title = "Aisle"), yaxis = list(title = "Number of Orders")) %>% 
   hide_legend()
 ```
@@ -83,7 +82,7 @@ xform = list(title = "Day", categoryorder = "array",
              categoryarray = c("Sun","Mon","Tue","Wed","Thu","Fri","Sat"))
 
 instacart_df %>% 
-  plot_ly(y = ~order_number, color = ~day_of_week, type = "box", colors = "viridis") %>% 
+  plot_ly(y = ~order_number, color = ~day_of_week, type = "box") %>% 
   layout(yaxis = list(title = "Number of Orders"), xaxis = xform) %>%
   hide_legend()
 ```
