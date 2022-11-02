@@ -16,7 +16,16 @@ library(plotly)
 
 &nbsp;
 
-### Line Plot
+### Line Plot: Order Quantity Change Over Time
+
+```{r}
+instacart_df %>%
+  count(time, department) %>%
+  plot_ly(x = ~time, y = ~n, 
+          type = "scatter", mode = "lines", color = ~department, colors = "viridis") %>% 
+  layout(xaxis = list(title = 'Time'), yaxis = list(title = 'Number of Orders'))
+```
+
 
 &nbsp;
 

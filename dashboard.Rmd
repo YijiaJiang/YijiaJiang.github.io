@@ -5,8 +5,13 @@ output:
     orientation: columns
     vertical_layout: fill
     navbar:
-      - { icon: "fa-home", href: "https://YijiaJiang.github.io", align: right }
+      - { icon: fa-home, href: index.html, align: right }
+      - { icon: fa-linkedin, href: https://www.linkedin.com/in/yijia-jiang/", align: right }
+      - { icon: fa-envelope, href: mailto:<yj2687@cumc.columbia.edu>, align: right }
+      - { icon: fa-github, href: "http://github.com/Huneel7/", align: right }
     source_code: embed
+    theme: 
+      bootswatch: minty
 ---
 
 
@@ -26,10 +31,33 @@ instacart_df =
   instacart %>% 
   as_tibble(instacart) %>% 
   mutate(day = order_dow + 1, day_of_week = lubridate::wday(day, label = TRUE)) %>%
-  select(order_id, product_id, order_number, day_of_week, order_hour_of_day, product_name, aisle, department) %>% 
+  mutate(time = paste(as.character(order_hour_of_day),"00",sep = ":")) %>% 
+  mutate(time = factor(time, levels = c("0:00","1:00", "2:00", "3:00","4:00","5:00","6:00","7:00","8:00","9:00",
+                                        "10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00",
+                                        "19:00","20:00","21:00","22:00","23:00"))) %>% 
+  select(order_id, product_id, order_number, day_of_week, time, product_name, aisle, department) %>% 
   drop_na() 
 ```
 
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+
+
+### Line Chart: Order Quantity Change Over Time
+
+```{r}
+instacart_df %>%
+  count(time, department) %>%
+  plot_ly(x = ~time, y = ~n, 
+          type = "scatter", mode = "lines", color = ~department, colors = "viridis") %>% 
+  layout(xaxis = list(title = 'Time'), yaxis = list(title = 'Number of Orders'))
+```
+
+
+
+Column {data-width=400}
+-----------------------------------------------------------------------
 
 
 ### Bar Chart: Number of Items Ordered in Each Aisle
@@ -39,32 +67,21 @@ instacart_df %>%
   count(aisle) %>% 
   filter(n > 10000) %>% 
   mutate(aisle = fct_reorder(aisle, n)) %>% 
-  plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "bar", colors = "viridis")
+  plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "bar", colors = "viridis") %>% 
+  layout(xaxis = list(title = 'Aisle'), yaxis = list(title = 'Number of Orders')) %>% 
+  hide_legend()
 ```
 
 
-Column {data-width=650}
------------------------------------------------------------------------
 
-### Line Chart: Order Quantity Change Over Time
-
-```{r}
-instacart_df %>%
-  count(order_hour_of_day, department) %>%
-  plot_ly(x = ~order_hour_of_day, y = ~n, 
-          type = "scatter", mode = "lines", color = ~department, colors = "viridis") %>% 
-  layout(xaxis = list(title = 'Day'), yaxis = list(title = 'Number of Orders'))
-```
-
-Column {data-width=350}
------------------------------------------------------------------------
 
 ### Boxplot: Order number distribution during the week
 
 ```{r}
 instacart_df %>% 
   plot_ly(y = ~order_number, color = ~day_of_week, type = "box", colors = "viridis") %>% 
-  layout(title = "Order number distribution during the week")
+  layout(xaxis = list(title = 'Number of Orders'), yaxis = list(title = 'Day')) %>%
+  hide_legend()
 ```
 
 
