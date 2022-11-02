@@ -65,7 +65,7 @@ Column {data-width=400}
 ```{r}
 instacart_df %>% 
   count(aisle) %>% 
-  filter(n > 10000) %>% 
+  filter(n > 15000) %>% 
   mutate(aisle = fct_reorder(aisle, n)) %>% 
   plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "bar", colors = "viridis") %>% 
   layout(xaxis = list(title = 'Aisle'), yaxis = list(title = 'Number of Orders')) %>% 
@@ -75,12 +75,12 @@ instacart_df %>%
 
 
 
-### Boxplot: Order number distribution during the week
+### Boxplot: Order Quantity Distribution for Each Day
 
 ```{r}
 instacart_df %>% 
   plot_ly(y = ~order_number, color = ~day_of_week, type = "box", colors = "viridis") %>% 
-  layout(xaxis = list(title = 'Number of Orders'), yaxis = list(title = 'Day')) %>%
+  layout(yaxis = list(title = 'Number of Orders'), xaxis = list(title = 'Day')) %>%
   hide_legend()
 ```
 
