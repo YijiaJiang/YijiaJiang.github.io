@@ -1,19 +1,19 @@
 ---
+title: "Dashboard for Instacart Online Grocery Shopping Dataset"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+    navbar:
+      - { icon: "fa-home", href: "https://YijiaJiang.github.io", align: right }
     source_code: embed
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(cache = TRUE)
-```
 
-```{r}
+```{r set up,include=FALSE}
+library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
-
 library(plotly)
 ```
 
@@ -24,6 +24,50 @@ data("instacart")
 
 instacart_df = 
   instacart %>% 
-  as_tibble(instacart)
+  as_tibble(instacart) %>% 
+  mutate(day = order_dow + 1, day_of_week = lubridate::wday(day, label = TRUE)) %>%
+  select(order_id, product_id, order_number, day_of_week, order_hour_of_day, product_name, aisle, department) %>% 
+  drop_na() 
 ```
+
+
+
+### Bar Chart: Number of Items Ordered in Each Aisle
+
+```{r}
+instacart_df %>% 
+  count(aisle) %>% 
+  filter(n > 10000) %>% 
+  mutate(aisle = fct_reorder(aisle, n)) %>% 
+  plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "bar", colors = "viridis")
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Line Chart: Order Quantity Change Over Time
+
+```{r}
+instacart_df %>%
+  count(order_hour_of_day, department) %>%
+  plot_ly(x = ~order_hour_of_day, y = ~n, 
+          type = "scatter", mode = "lines", color = ~department, colors = "viridis") %>% 
+  layout(xaxis = list(title = 'Day'), yaxis = list(title = 'Number of Orders'))
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Boxplot: Order number distribution during the week
+
+```{r}
+instacart_df %>% 
+  plot_ly(y = ~order_number, color = ~day_of_week, type = "box", colors = "viridis") %>% 
+  layout(title = "Order number distribution during the week")
+```
+
+
+
+
 
