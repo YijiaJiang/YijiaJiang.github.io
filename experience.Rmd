@@ -28,16 +28,16 @@ output:
 &nbsp;
 
 ### Academic Projects
-- **Crime Rate Prediction in US Counties Using Multiple Linear Regression Model** [New York, NY]{style="float:right"}  
-  Final Project of Biostatistics [*Dec. 2021*]{style="float:right"}  
+- **Crime Rate Prediction in US Counties Using Multiple Linear Regression Model** [New York, NY]{style="float:right"}   
+  Final Project of Biostatistics [*Dec. 2021*]{style="float:right"}    
   - Obtained an effective tool to predict the crime rate in US counties for future crime prevention.  
   - Pre-processed the data containing the characteristics of 440 US counties from 1990 to 1992 and employed exploratory data analysis to identify the correlation between predictors and crime rate.  
   - Explored several candidate multiple linear regression models for predicting the crime rate after the completion of statistical modelling, diagnosis, and validation.  
 
 &NewLine;
 
-- **Applying Technical Independent ML Models to Predict Single-based m6A Sites** [Suzhou, China]{style="float:right"}  
-  Final Year Project [*Sept. 2020 – Jun. 2021*]{style="float:right"}  
+- **Applying Technical Independent ML Models to Predict Single-based m6A Sites** [Suzhou, China]{style="float:right"}   
+  Final Year Project [*Sept. 2020 – Jun. 2021*]{style="float:right"}    
   - Established a statistical framework for GC content bias correction in genomic machine learning models, namely correcting the common technical artifact in the inference step of the predictive model so that we can accurately predict the genomic markers.
   - Applied the classical smooth regression models to the inference values of machine learning algorithms on the validation set.
   - Performed exploratory data analysis (EDA) and decided if the GC content bias of the provided samples is indeed technically significant.
@@ -46,8 +46,8 @@ output:
 
 &NewLine;
 
-- **Factors Associated with Fatality After Suicide Attempt Using Logistic Regression and Poisson Regression** [Suzhou, China]{style="float:right"}  
-  Final project of Biostatistics [*Jun. 2020*]{style="float:right"}  
+- **Factors Associated with Fatality After Suicide Attempt Using Logistic Regression and Poisson Regression** [Suzhou, China]{style="float:right"}    
+  Final project of Biostatistics [*Jun. 2020*]{style="float:right"}   
   - Examined the potential factors linked with fatality after suicide attempts and analyzed the association between the dependent variable fatality of attempters and seven specific covariates (residency, gender, age, education, occupation, suicide method and season).
   - Compared the two regression models-Logistic regression and Poisson regression- and diagnosis with leverage values, Cook’s distance, VIFs and goodness of fit.
   - Determined associated factors such as the attempter’s gender, age, education level, occupation, suicide method used, and season of year significantly influenced the fatality.   

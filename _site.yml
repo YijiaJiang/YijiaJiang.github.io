@@ -11,7 +11,7 @@ navbar:
     - icon: fa-brands fa-linkedin
       href: https://www.linkedin.com/in/yijia-jiang/
     - icon: fa-envelope fa-lg
-      href: mailto:yj2687@cumc.columbia.edu>
+      href: mailto:<yj2687@cumc.columbia.edu>
     - icon: fa-github fa-lg
       href: http://github.com/YijiaJiang/
 output:

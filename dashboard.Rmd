@@ -60,7 +60,7 @@ Column {data-width=400}
 -----------------------------------------------------------------------
 
 
-### Bar Chart: Number of Items Ordered in Each Aisle
+### Bar Plot: Number of Items Ordered in Each Aisle
 
 ```{r}
 instacart_df %>% 

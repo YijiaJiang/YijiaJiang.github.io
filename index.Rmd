@@ -8,17 +8,17 @@ output:
 
 &nbsp;
 
+<img src="images/photo.jpeg" style="width:50%; margin: 0px 20px 0px 0px" align="left">
+
 ### About Me
 
-<img src="images/photo.jpeg" style="width:50%">
+Hi! Nice to meet you! My name is Yijia Jiang, born and raised in Suzhou, China. I am a 2rd year Master of Science student majoring in **Biostatistics** (Pharmaceutical Statistics Track) in the Mailman School of Public Health of <a style="text-decoration:none" href="https://www.columbia.edu/"> Columbia University in the City of New York</a>. I earned my Bachelor of Science degree in **Bioinformatics** in <a style="text-decoration:none" href="https://www.xjtlu.edu.cn/en/"> Xi'an Jiaotong-Liverpool University</a>. Having broad interests, I am highly-motivated and reliable with pleasant attitude and perseverant personality. After graduation, I would like to serve human health and work as a statistical programmer, health data scientist or biostatistician in pharmaceutical and healthcare industry. Learn more from <a style="text-decoration:none" href="experience.html"> here</a>.
 
-My name is Yijia Jiang, a 2rd year M.S. student majoring in Biostatistics (Pharmaceutical Statistics Track) in the Mailman School of Public Health of <a style="text-decoration:none" href="https://www.columbia.edu/"> Columbia University</a>. And I completed my bachelor degree in Bioinformatics in <a style="text-decoration:none" href="https://www.xjtlu.edu.cn/en/"> Xi'an Jiaotong-Liverpool University</a>.
 
 
 &nbsp;
 
 
 ### Contact
-<i class="fas fa-phone"></i> Tel: +1 (646)-829-6470 [The United State]
-
-<i class="fas fa-envelope"></i> Email: <yijia.jiang1224@gmail.com> OR <yj2687@cumc.columbia.edu>
+<i class="fas fa-phone"></i> Tel: +1 (646)-829-6470   
+<i class="fas fa-envelope"></i> Email: <yj2687@cumc.columbia.edu>
