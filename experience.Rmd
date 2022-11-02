@@ -9,7 +9,7 @@ output:
 &nbsp;
 
 
-<img src="images/liverpool.jpg" style="width:100%">
+<img src="images/liverpool.jpeg" style="width:100%">
 
 &nbsp;
 
