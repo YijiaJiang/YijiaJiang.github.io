@@ -2,9 +2,14 @@ name: "Yay internet!"
 output_dir: "."
 navbar:
   title: "Home"
+  type: inverse
   right:
-    - text: "About"
-      href: about.html
+    - text: "Experience"
+      href: experience.html
+    - text: "Plotly"
+      href: plotly.html
+    - text: "Dashboard"
+      href: dashboard.html
     - icon: fa-brands fa-linkedin
       href: https://www.linkedin.com/in/yijia-jiang/
     - icon: fa-envelope fa-lg
@@ -13,4 +18,5 @@ navbar:
       href: http://github.com/YijiaJiang/
 output:
   html_document:
-    css: bootstrap.min (1).css
+    theme: 
+      bootswatch: minty

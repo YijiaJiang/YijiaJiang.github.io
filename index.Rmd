@@ -1,17 +1,24 @@
 ---
+title: "Welcome to My Website!"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# About me
+&nbsp;
 
-My name is Yijia Jiang, a second year M.S. student in Biostatistics department, the Mailman School of Public Health in [Columbia University in the city of New York](https://www.columbia.edu/). And I completed my bachelor degree in Bioinformatics in [Xi'an Jiaotong-Liverpool University](https://www.xjtlu.edu.cn/en/).
+### About Me
 
-<img src="images/yellow mountain.jpg" style="width:100%">
+<img src="images/photo.jpeg" style="width:50%">
 
-# Contact
-Tel: +1 (646)-829-6470 [The United State]
+My name is Yijia Jiang, a 2rd year M.S. student majoring in Biostatistics (Pharmaceutical Statistics Track) in the Mailman School of Public Health of <a style="text-decoration:none" href="https://www.columbia.edu/"> Columbia University</a>. And I completed my bachelor degree in Bioinformatics in <a style="text-decoration:none" href="https://www.xjtlu.edu.cn/en/"> Xi'an Jiaotong-Liverpool University</a>.
 
-Email: <yijia.jiang1224@gmail.com> OR <yj2687@cumc.columbia.edu>
+
+&nbsp;
+
+
+### Contact
+<i class="fas fa-phone"></i> Tel: +1 (646)-829-6470 [The United State]
+
+<i class="fas fa-envelope"></i> Email: <yijia.jiang1224@gmail.com> OR <yj2687@cumc.columbia.edu>
