@@ -6,9 +6,9 @@ output:
     vertical_layout: fill
     navbar:
       - { icon: fa-home, href: index.html, align: right }
-      - { icon: fa-linkedin, href: https://www.linkedin.com/in/yijia-jiang/", align: right }
+      - { icon: fa-linkedin, href: https://www.linkedin.com/in/yijia-jiang/, align: right }
       - { icon: fa-envelope, href: mailto:<yj2687@cumc.columbia.edu>, align: right }
-      - { icon: fa-github, href: "http://github.com/Huneel7/", align: right }
+      - { icon: fa-github, href: https://github.com/YijiaJiang/, align: right }
     source_code: embed
     theme: 
       bootswatch: minty
@@ -83,7 +83,6 @@ instacart_df %>%
   layout(xaxis = list(title = 'Number of Orders'), yaxis = list(title = 'Day')) %>%
   hide_legend()
 ```
-
 
 
 
