@@ -30,33 +30,34 @@ data("instacart")
 instacart_df = 
   instacart %>% 
   as_tibble(instacart) %>% 
+  janitor::clean_names() %>%
   mutate(day = order_dow + 1, day_of_week = lubridate::wday(day, label = TRUE)) %>%
   mutate(time = paste(as.character(order_hour_of_day),"00",sep = ":")) %>% 
-  mutate(time = factor(time, levels = c("0:00","1:00", "2:00", "3:00","4:00","5:00","6:00","7:00","8:00","9:00",
-                                        "10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00",
-                                        "19:00","20:00","21:00","22:00","23:00"))) %>% 
   select(order_id, product_id, order_number, day_of_week, time, product_name, aisle, department) %>% 
   drop_na() 
 ```
 
 
-Column {data-width=600}
+Column {data-width=610}
 -----------------------------------------------------------------------
 
 
 ### Line Chart: Order Quantity Change Over Time
 
 ```{r}
-instacart_df %>%
+instacart_df %>% 
+  mutate(time = factor(time, levels = c("0:00","1:00", "2:00", "3:00","4:00","5:00","6:00","7:00","8:00","9:00",
+                                        "10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00",
+                                        "19:00","20:00","21:00","22:00","23:00"))) %>% 
   count(time, department) %>%
   plot_ly(x = ~time, y = ~n, 
-          type = "scatter", mode = "lines", color = ~department, colors = "viridis") %>% 
-  layout(xaxis = list(title = 'Time'), yaxis = list(title = 'Number of Orders'))
+          type = "scatter", mode = "lines+markers", color = ~department, colors = "viridis") %>% 
+  layout(xaxis = list(title = "Time"), yaxis = list(title = "Number of Orders"))
 ```
 
 
 
-Column {data-width=400}
+Column {data-width=390}
 -----------------------------------------------------------------------
 
 
@@ -68,7 +69,7 @@ instacart_df %>%
   filter(n > 15000) %>% 
   mutate(aisle = fct_reorder(aisle, n)) %>% 
   plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "bar", colors = "viridis") %>% 
-  layout(xaxis = list(title = 'Aisle'), yaxis = list(title = 'Number of Orders')) %>% 
+  layout(xaxis = list(title = "Aisle"), yaxis = list(title = "Number of Orders")) %>% 
   hide_legend()
 ```
 
@@ -78,9 +79,12 @@ instacart_df %>%
 ### Boxplot: Order Quantity Distribution for Each Day
 
 ```{r}
+xform = list(title = "Day", categoryorder = "array", 
+             categoryarray = c("Sun","Mon","Tue","Wed","Thu","Fri","Sat"))
+
 instacart_df %>% 
   plot_ly(y = ~order_number, color = ~day_of_week, type = "box", colors = "viridis") %>% 
-  layout(yaxis = list(title = 'Number of Orders'), xaxis = list(title = 'Day')) %>%
+  layout(yaxis = list(title = "Number of Orders"), xaxis = xform) %>%
   hide_legend()
 ```
 
