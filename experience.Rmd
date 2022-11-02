@@ -46,7 +46,8 @@ output:
 
 &NewLine;
 
-- **Factors Associated with Fatality After Suicide Attempt Using Logistic Regression and Poisson Regression** [Suzhou, China]{style="float:right"}    
+- **Factors Associated with Fatality After Suicide Attempt**  
+  **Using Logistic Regression and Poisson Regression** [Suzhou, China]{style="float:right"}    
   Final project of Biostatistics [*Jun. 2020*]{style="float:right"}   
   - Examined the potential factors linked with fatality after suicide attempts and analyzed the association between the dependent variable fatality of attempters and seven specific covariates (residency, gender, age, education, occupation, suicide method and season).
   - Compared the two regression models-Logistic regression and Poisson regression- and diagnosis with leverage values, Cook’s distance, VIFs and goodness of fit.
@@ -54,7 +55,8 @@ output:
 
 &NewLine;
 
-- **Developing an Interactive Epitranscriptome Website to Query Single-base Resolution Sequencing Data** [Suzhou, China]{style="float:right"}    
+- **Developing an Interactive Epitranscriptome Website**  
+  **to Query Single-base Resolution Sequencing Data** [Suzhou, China]{style="float:right"}    
   Summer Undergraduate Research Fellowships [*Jul. 2019 - Sept. 2019*]{style="float:right"}  
   - Built information aggregation website for RNA modification in field of bioinformatics by using HTML5, CSS and JavaScript; implemented data collection sorted by single-base resolution through quality-controlled information screening.
   - Built a database by using PHP and MySQL at back-end to ensured that location of individual bases was precisely identified in each RNA modification record in database for researchers to retrieve.
