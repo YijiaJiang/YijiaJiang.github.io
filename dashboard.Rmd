@@ -23,7 +23,7 @@ library(plotly)
 
 
 
-```{r}
+```{r,message=FALSE,warning=FALSE}
 data("instacart")
 
 instacart_df = 
@@ -43,14 +43,14 @@ Column {data-width=610}
 
 ### Line Chart: Order Quantity Change Over Time
 
-```{r}
+```{r,message=FALSE,warning=FALSE}
 instacart_df %>% 
   mutate(time = factor(time, levels = c("0:00","1:00", "2:00", "3:00","4:00","5:00","6:00","7:00","8:00","9:00",
                                         "10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00",
                                         "19:00","20:00","21:00","22:00","23:00"))) %>% 
   count(time, department) %>%
   plot_ly(x = ~time, y = ~n, 
-          type = "scatter", mode = "lines+markers", color = ~department) %>% 
+          type = "scatter", mode = "lines+markers", color = ~str_to_title(department)) %>% 
   layout(xaxis = list(title = "Time"), yaxis = list(title = "Number of Orders"))
 ```
 
@@ -62,11 +62,12 @@ Column {data-width=390}
 
 ### Bar Plot: Number of Items Ordered in Each Aisle
 
-```{r}
+```{r,message=FALSE,warning=FALSE}
 instacart_df %>% 
   count(aisle) %>% 
-  filter(n > 15000) %>% 
-  mutate(aisle = fct_reorder(aisle, n)) %>% 
+  filter(n > 20000) %>% 
+  mutate(aisle = str_to_title(aisle)) %>% 
+  mutate(aisle = fct_reorder(aisle, -n)) %>% 
   plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "bar") %>% 
   layout(xaxis = list(title = "Aisle"), yaxis = list(title = "Number of Orders")) %>% 
   hide_legend()
@@ -77,13 +78,11 @@ instacart_df %>%
 
 ### Boxplot: Order Quantity Distribution for Each Day
 
-```{r}
-xform = list(title = "Day", categoryorder = "array", 
-             categoryarray = c("Sun","Mon","Tue","Wed","Thu","Fri","Sat"))
-
+```{r,message=FALSE,warning=FALSE}
 instacart_df %>% 
   plot_ly(y = ~order_number, color = ~day_of_week, type = "box") %>% 
-  layout(yaxis = list(title = "Number of Orders"), xaxis = xform) %>%
+  layout(yaxis = list(title = "Number of Orders"), 
+         xaxis = list(title = "Day", categoryorder = "array", categoryarray = c("Sun","Mon","Tue","Wed","Thu","Fri","Sat"))) %>%
   hide_legend()
 ```
 
