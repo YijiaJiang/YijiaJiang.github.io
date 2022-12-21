@@ -12,6 +12,8 @@ output:
     source_code: embed
     theme: 
       bootswatch: minty
+    includes: 
+      in_header: icon.html
 ---
 
 ```{r set up,include=FALSE}
