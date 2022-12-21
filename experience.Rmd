@@ -16,7 +16,7 @@ output:
 ### Education
 - **Columbia University Mailman School of Public Health** [New York, NY]{style="float:right"}  
   Master of Science (MS) Biostatistics, GPA: 4.05/4.33 [*Sept. 2021 – May. 2023*]{style="float:right"}
-  - Related Courses: Probability, Biostatistical Methods I, Principles of Epidemiology, Statistical Inference, Statistical Computing with SAS, New drug development, Introduction to Clinical Trials, Clinical Trial Methodlogy, Survival Analysis, Data Science, Relational Databases and SQL Programming
+  - Related Courses: Probability, Biostatistical Methods I, Principles of Epidemiology, Statistical Inference, Statistical Computing with SAS, New drug development, Introduction to Clinical Trials, Clinical Trial Methodology, Survival Analysis, Data Science, Relational Databases and SQL Programming
 
 &NewLine;
 
@@ -65,6 +65,13 @@ output:
 &nbsp;
 
 ### Professional Experience
+- **Icahn School of Medicine at Mount Sinai** [New York, NY]{style="float:right"}  
+  Data Scientist Intern [*Oct. 2022 – Dec. 2022*]{style="float:right"}    
+  - Collaborated with biostatisticians and medical professionals to perform statistical programming for data manipulation and data analysis as part of a manuscript for publication related to cardiovascular studies. 
+  - Developed and maintained SAS macro programs for automated reporting such as tables, and graphs from various cardiovascular databases, ensuring deliverables were completed on time and with high quality.
+  
+&NewLine;
+
 - **China Cardiovascular Association** [Suzhou, China]{style="float:right"}   
   Intern [*Feb. 2021 – Jul. 2021*]{style="float:right"}  
   - Assisted to publicize and promote the construction of national hypertension centers and audit the certification of hypertension centers.
@@ -91,8 +98,8 @@ output:
   
 &NewLine; 
   
-- **Career Development Center of XJTLU** [Suzhou, China]{style="float:right"}  
-  Administrator [*Sept. 2017 – Apr. 2019*]{style="float:right"}  
+- **Career Development Center of XJTLU** [Suzhou, China]{style="float:right"}   
+  Administrator [*Sept. 2017 – Apr. 2019*]{style="float:right"}    
   - Participated in event planning and promotion, mainly responsible for making posters, posting on social media and carrying out routine promotion using Adobe Photoshop and other web-based tools.
   - Planned and organized annual gathering and buffet reception for biological science departments that provided freshmen with information on different programs as well as advice on how to choose from them, creating beneficial conversations between faculty and students and helping students plan their college life.
   
