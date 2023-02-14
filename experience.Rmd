@@ -107,8 +107,14 @@ output:
   
 &nbsp;
 
+### Publications & Conference
+- Gao, M., Spirito, A., Sartori, S., Lupo, S., Pileggi, B., Smith, K., **Jiang, Y.**... (2023). Prognostic Impact of Procedural Complexity in Octogenarians undergoing Percutaneous Coronary Intervention, *SCAI 2023 Scientific Sessions*.
+
+
+&nbsp;
+
 ### Skills & Interets
 - **Languages:** Chinese (Native), English (Fluent)  
 - **Skills:** Microsoft Office, Access, R, SAS, Python, Java, MATLAB, SQL, HTML5, CSS, JavaScript, PHP   
-- **Certification:** SAS Certified Specialist: Base Programming Using SAS 9.4, SAS Certified Specialist Advanced Programming Using SAS 9.4, Python for Everyone (University of Michigan)
+- **Certification:** SAS Certified Specialist: Base Programming Using SAS 9.4, SAS Certified Specialist: Advanced Programming Using SAS 9.4, Python for Everyone (University of Michigan)
 - **Interests:** Guzheng, Japanese, Stand-up comedy
